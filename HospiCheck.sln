@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospiCheck", "HospiCheck\HospiCheck.csproj", "{E2ED6488-7657-47A6-B06D-AD1EEC2457E8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup Dosyası", "Setup Dosyası\Setup Dosyası.vdproj", "{63171748-8984-472E-A87E-E2D8D8228A59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2ED6488-7657-47A6-B06D-AD1EEC2457E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2ED6488-7657-47A6-B06D-AD1EEC2457E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2ED6488-7657-47A6-B06D-AD1EEC2457E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2ED6488-7657-47A6-B06D-AD1EEC2457E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63171748-8984-472E-A87E-E2D8D8228A59}.Debug|Any CPU.ActiveCfg = Debug
+		{63171748-8984-472E-A87E-E2D8D8228A59}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52A3B05F-3471-47DA-AA86-B1B4BEE6EADD}
+	EndGlobalSection
+EndGlobal
