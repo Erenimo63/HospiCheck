@@ -34,7 +34,6 @@
             this.labelkimlik = new System.Windows.Forms.Label();
             this.txtkimlik = new System.Windows.Forms.TextBox();
             this.labelbaglantı = new System.Windows.Forms.Label();
-            this.txtklinik = new System.Windows.Forms.TextBox();
             this.txtsoyisim = new System.Windows.Forms.TextBox();
             this.labelklinik = new System.Windows.Forms.Label();
             this.labelsoyisim = new System.Windows.Forms.Label();
@@ -44,7 +43,8 @@
             this.btnana = new System.Windows.Forms.Button();
             this.btnbilgi = new System.Windows.Forms.Button();
             this.lbldoktor = new System.Windows.Forms.Label();
-            this.txtdoktor = new System.Windows.Forms.TextBox();
+            this.comboklinik = new System.Windows.Forms.ComboBox();
+            this.combodoktor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtisim
@@ -94,14 +94,6 @@
             this.labelbaglantı.Size = new System.Drawing.Size(129, 19);
             this.labelbaglantı.TabIndex = 7;
             this.labelbaglantı.Text = "Bağlantı Kuruldu";
-            // 
-            // txtklinik
-            // 
-            this.txtklinik.Location = new System.Drawing.Point(384, 86);
-            this.txtklinik.Name = "txtklinik";
-            this.txtklinik.ReadOnly = true;
-            this.txtklinik.Size = new System.Drawing.Size(100, 20);
-            this.txtklinik.TabIndex = 11;
             // 
             // txtsoyisim
             // 
@@ -198,13 +190,32 @@
             this.lbldoktor.TabIndex = 9;
             this.lbldoktor.Text = "Doktor";
             // 
-            // txtdoktor
+            // comboklinik
             // 
-            this.txtdoktor.Location = new System.Drawing.Point(490, 86);
-            this.txtdoktor.Name = "txtdoktor";
-            this.txtdoktor.ReadOnly = true;
-            this.txtdoktor.Size = new System.Drawing.Size(100, 20);
-            this.txtdoktor.TabIndex = 11;
+            this.comboklinik.Enabled = false;
+            this.comboklinik.FormattingEnabled = true;
+            this.comboklinik.Items.AddRange(new object[] {
+            "Göğüs Cerrahisi",
+            "Göğüs Hastalıkları",
+            "Genel Cerrahi",
+            "Gastroenteroloji",
+            "Üroloji",
+            "Kardiyoloji",
+            "Çocuk Cerrahisi"});
+            this.comboklinik.Location = new System.Drawing.Point(384, 85);
+            this.comboklinik.Name = "comboklinik";
+            this.comboklinik.Size = new System.Drawing.Size(100, 21);
+            this.comboklinik.TabIndex = 15;
+            this.comboklinik.SelectedIndexChanged += new System.EventHandler(this.comboklinik_SelectedIndexChanged);
+            // 
+            // combodoktor
+            // 
+            this.combodoktor.Enabled = false;
+            this.combodoktor.FormattingEnabled = true;
+            this.combodoktor.Location = new System.Drawing.Point(490, 85);
+            this.combodoktor.Name = "combodoktor";
+            this.combodoktor.Size = new System.Drawing.Size(100, 21);
+            this.combodoktor.TabIndex = 15;
             // 
             // Taburcu
             // 
@@ -212,12 +223,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(715, 182);
+            this.Controls.Add(this.combodoktor);
+            this.Controls.Add(this.comboklinik);
             this.Controls.Add(this.btnana);
             this.Controls.Add(this.btnbilgi);
             this.Controls.Add(this.btntaburcu);
             this.Controls.Add(this.txtücret);
-            this.Controls.Add(this.txtdoktor);
-            this.Controls.Add(this.txtklinik);
             this.Controls.Add(this.labelücret);
             this.Controls.Add(this.lbldoktor);
             this.Controls.Add(this.txtsoyisim);
@@ -244,7 +255,6 @@
         private System.Windows.Forms.Label labelkimlik;
         private System.Windows.Forms.TextBox txtkimlik;
         private System.Windows.Forms.Label labelbaglantı;
-        private System.Windows.Forms.TextBox txtklinik;
         private System.Windows.Forms.TextBox txtsoyisim;
         private System.Windows.Forms.Label labelklinik;
         private System.Windows.Forms.Label labelsoyisim;
@@ -254,6 +264,7 @@
         private System.Windows.Forms.Button btnana;
         private System.Windows.Forms.Button btnbilgi;
         private System.Windows.Forms.Label lbldoktor;
-        private System.Windows.Forms.TextBox txtdoktor;
+        private System.Windows.Forms.ComboBox comboklinik;
+        private System.Windows.Forms.ComboBox combodoktor;
     }
 }

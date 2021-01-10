@@ -184,5 +184,27 @@ namespace HospiCheck
                 MessageBox.Show("Kayıt Yapılamadı \n Hata : "+hata);
             }
         }
+
+        private void btnbilgi_Click(object sender, EventArgs e)
+        {
+            SQLiteCommand bilgi = new SQLiteCommand("select İsim,Soyisim,Klinik,Doktor,Tarih,Saat from Randevu where TC_Kimlik=@kimlik",baglan);
+            SQLiteParameter prm = new SQLiteParameter("@kimlik",txtkimlik.Text);
+            bilgi.Parameters.Add(prm);
+            SQLiteDataReader oku = bilgi.ExecuteReader();
+            try
+            {
+                oku.Read();
+                txtisim.Text = oku["İsim"].ToString();
+                txtsoyisim.Text = oku["Soyisim"].ToString();
+                comboklinik.Text = oku["Klinik"].ToString();
+                combodoktor.Text = oku["Doktor"].ToString();
+                txtsaat.Text = oku["Saat"].ToString();
+                dateTimetarih.Text = oku["Tarih"].ToString();
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Getirilemedi \n Hata : "+hata);
+            }
+        }
     }
 }

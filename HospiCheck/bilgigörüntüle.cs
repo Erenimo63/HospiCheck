@@ -54,7 +54,7 @@ namespace HospiCheck
             SQLiteDataReader taburcuoku = taburcu.ExecuteReader();
             
             
-            if (taburcuoku.Read() && randevuoku.Read())
+            if (taburcuoku.Read())
             {
                 SQLiteCommand taburcu1 = new SQLiteCommand($"Select * from Taburcu where TC_Kimlik = '{txtkimlik.Text}'", baglan);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(taburcu1);
@@ -69,7 +69,7 @@ namespace HospiCheck
                     MessageBox.Show("Getirilemedi \n Hata : "+hata);
                 }
             }
-            else if (randevuoku.Read() && hastaoku.Read())
+            else if (randevuoku.Read())
             {
                 SQLiteCommand randevu1 = new SQLiteCommand($"Select * from Randevu where TC_Kimlik = '{txtkimlik.Text}'", baglan);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(randevu1);

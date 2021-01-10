@@ -46,6 +46,7 @@
             this.btnana = new System.Windows.Forms.Button();
             this.btnkaydet = new System.Windows.Forms.Button();
             this.dateTimetarih = new System.Windows.Forms.DateTimePicker();
+            this.btnbilgi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelbaglantı
@@ -81,6 +82,7 @@
             // 
             this.txtisim.Location = new System.Drawing.Point(172, 83);
             this.txtisim.Name = "txtisim";
+            this.txtisim.ReadOnly = true;
             this.txtisim.Size = new System.Drawing.Size(126, 20);
             this.txtisim.TabIndex = 1;
             // 
@@ -99,6 +101,7 @@
             // 
             this.txtsoyisim.Location = new System.Drawing.Point(304, 83);
             this.txtsoyisim.Name = "txtsoyisim";
+            this.txtsoyisim.ReadOnly = true;
             this.txtsoyisim.Size = new System.Drawing.Size(126, 20);
             this.txtsoyisim.TabIndex = 2;
             // 
@@ -126,6 +129,7 @@
             // 
             // comboklinik
             // 
+            this.comboklinik.Enabled = false;
             this.comboklinik.FormattingEnabled = true;
             this.comboklinik.IntegralHeight = false;
             this.comboklinik.Items.AddRange(new object[] {
@@ -155,6 +159,7 @@
             // 
             // combodoktor
             // 
+            this.combodoktor.Enabled = false;
             this.combodoktor.FormattingEnabled = true;
             this.combodoktor.IntegralHeight = false;
             this.combodoktor.Location = new System.Drawing.Point(118, 162);
@@ -188,6 +193,7 @@
             // 
             this.txtsaat.Location = new System.Drawing.Point(330, 162);
             this.txtsaat.Name = "txtsaat";
+            this.txtsaat.ReadOnly = true;
             this.txtsaat.Size = new System.Drawing.Size(100, 20);
             this.txtsaat.TabIndex = 6;
             // 
@@ -207,7 +213,7 @@
             // 
             this.btnkaydet.Font = new System.Drawing.Font("Sitka Small", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnkaydet.ForeColor = System.Drawing.Color.Maroon;
-            this.btnkaydet.Location = new System.Drawing.Point(109, 231);
+            this.btnkaydet.Location = new System.Drawing.Point(233, 231);
             this.btnkaydet.Name = "btnkaydet";
             this.btnkaydet.Size = new System.Drawing.Size(91, 28);
             this.btnkaydet.TabIndex = 8;
@@ -217,6 +223,7 @@
             // 
             // dateTimetarih
             // 
+            this.dateTimetarih.Enabled = false;
             this.dateTimetarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimetarih.Location = new System.Drawing.Point(224, 162);
             this.dateTimetarih.Name = "dateTimetarih";
@@ -224,12 +231,25 @@
             this.dateTimetarih.TabIndex = 5;
             this.dateTimetarih.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // btnbilgi
+            // 
+            this.btnbilgi.Font = new System.Drawing.Font("Sitka Small", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnbilgi.ForeColor = System.Drawing.Color.Maroon;
+            this.btnbilgi.Location = new System.Drawing.Point(109, 231);
+            this.btnbilgi.Name = "btnbilgi";
+            this.btnbilgi.Size = new System.Drawing.Size(118, 28);
+            this.btnbilgi.TabIndex = 9;
+            this.btnbilgi.Text = "Bilgileri Getir";
+            this.btnbilgi.UseVisualStyleBackColor = true;
+            this.btnbilgi.Click += new System.EventHandler(this.btnbilgi_Click);
+            // 
             // HastaKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(446, 271);
+            this.Controls.Add(this.btnbilgi);
             this.Controls.Add(this.dateTimetarih);
             this.Controls.Add(this.btnkaydet);
             this.Controls.Add(this.btnana);
@@ -275,5 +295,6 @@
         private System.Windows.Forms.Button btnana;
         private System.Windows.Forms.Button btnkaydet;
         private System.Windows.Forms.DateTimePicker dateTimetarih;
+        private System.Windows.Forms.Button btnbilgi;
     }
 }
